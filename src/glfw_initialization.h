@@ -1,7 +1,7 @@
 #pragma once
-#include <GLFW/glfw3.h>
-#include <cstdlib>
+
 namespace veng {
+
 struct GlfwInitialization {
  public:
   GlfwInitialization();

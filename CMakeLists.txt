@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 4.00)
 project(VulkanEngine)
 
 find_package(Vulkan REQUIRED)
@@ -37,7 +37,7 @@ file(GLOB_RECURSE VulkanEngineSources CMAKE_CONFIGURE_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
     
 )
-add_executable(VulkanEngine ${VulkanEngineSources} )
+add_executable(VulkanEngine ${VulkanEngineSources} "src/glfw_monitor.h" "src/glfw_monitor.cpp" "src/glfw_window.h" "src/glfw_window.cpp" )
 target_link_libraries(VulkanEngine PRIVATE Vulkan::Vulkan)
 target_link_libraries(VulkanEngine PRIVATE glm)
 target_link_libraries(VulkanEngine PRIVATE glfw)
